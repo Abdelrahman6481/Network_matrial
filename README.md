@@ -160,6 +160,15 @@ within the same network. Routers operate at the network layer (Layer 3) of the O
 while bridges operate at the data link layer (Layer 2).
 >
 
+# Static routing and dynamic routing:
+
+>  Static routing and dynamic routing are two approaches to forwarding data packets in computer networks.
+
+`Static routing` involves manual configuration where network administrators manually set up routes between devices in the network. They define the path that packets should take when traveling between devices. Static routing is suitable for small networks with a fixed topology and infrequent changes.
+
+`Dynamic routing`, on the other hand, is an automated process where network devices exchange information to learn about the network topology and determine the best path for forwarding packets. In dynamic routing, network devices use routing protocols to exchange information about the state of the network and the best path for forwarding packets. This allows the network to adapt to changes in the topology, such as when new devices are added or removed, or when there are changes in network traffic. Dynamic routing is more flexible and scalable than static routing and is commonly used in large networks.
+
+> `In summary`, static routing requires manual configuration of routes, while dynamic routing automatically determines the best path for forwarding packets based on information exchanged between network devices. Static routing is suitable for small, simple networks, while dynamic routing is used in larger, more complex networks where changes to the topology are frequent.
 
 ## Proxy server:
 
@@ -231,6 +240,7 @@ over the VPN is protected from interception and monitoring by third parties, inc
 providers (`ISPs`),` hackers`, and `government agencies`.
 
 #### VPNs can be used to accomplish a variety of tasks, including:
+
 > - Providing remote access to a company's internal network for employees who work from home or travel frequently.
 > - Protecting sensitive data and communications while using public Wi-Fi networks or other unsecured internet connections.
 > - Bypassing internet censorship and geo-restrictions, allowing users to access websites and online services that may be blocked in their location.
@@ -265,19 +275,70 @@ it does not fall into the wrong hands.
 
 ## Asymmetric encryption:
 
-Asymmetric encryption, also known as public-key cryptography, is a type of encryption
-where two different keys are used for encryption and decryption. One key,
-called the public key, is used for encrypting data, while the other key, called the private key, 
-is used for decrypting data. Unlike symmetric encryption, where the same key is used for both encryption and decryption, in asymmetric encryption, the two keys are mathematically related but are not the same.
-In asymmetric encryption, the public key is widely distributed and can be freely shared, 
-while the private key is kept secret and only known to the owner. When someone wants to send an encrypted message to the owner of the public key, they use the public key to encrypt the message. Only the owner of the private key can then decrypt the message using their private key.
-Asymmetric encryption provides several advantages over symmetric encryption.
-First, it eliminates the need for a secure channel for key exchange, as the public key can be 
-freely distributed. Second, it provides a way to ensure the authenticity of the message sender,
-as the private key is only known to the owner and can be used to sign messages. Third,
-it provides a way to establish secure communications with multiple parties, as each party can have their
-own public and private keys.
-Some examples of asymmetric encryption algorithms include RSA, Diffie-Hellman, 
-and Elliptic Curve Cryptography (ECC). Asymmetric encryption is commonly used to secure sensitive 
-information such as passwords, credit card numbers, and other personal information in online transactions, 
-as well as to secure communication channels between individuals and organizations.
+`Asymmetric encryption`, also known as public-key cryptography, is a method of encryption that uses two different keys for encryption and decryption. It involves a public key that is freely distributed and a private key that is kept secret. The public key is used to encrypt data, while the private key is used to decrypt it.
+
+Asymmetric encryption offers several advantages over symmetric encryption. It eliminates the need for a secure channel for key exchange, as the public key can be freely distributed. It provides a way to authenticate the sender of a message, as the private key is used to sign messages. Additionally, it allows for secure communication with multiple parties, as each party can have their own set of public and private keys.
+
+Common examples of asymmetric encryption algorithms include `RSA, Diffie-Hellman`, and `Elliptic Curve Cryptography (ECC)`. Asymmetric encryption is widely used to secure sensitive information such as `passwords`, `credit card numbers`, and `personal information` in online transactions. It is also employed to establish secure communication channels between individuals and organizations.
+
+
+# Hashing:
+
+Hashing is a process of converting a plaintext message or data of any length into a fixed-length output, called a `hash value` or `message digest`. The hash value is a unique representation of the original message or data, and any changes to the message or data will result in a different hash value.
+
+Hashing algorithms are `one-way functions` that take an input message and produce a fixed-size output. The process of hashing is `deterministic`, meaning that the same input message will always produce the same hash value, and the output hash value cannot be reversed to recover the original message.
+
+Hashing is widely used in cryptography and information security for various purposes, including:
+> - `Data integrity`: Hashing can be used to verify the integrity of data by comparing the hash value of the original data with the hash value of the received data.
+> - `Password storage`: Hashing can be used to store passwords securely by hashing the password and storing the hash value instead of the plaintext password.
+> - `Digital signatures`: Hashing can be used in digital signatures to verify the authenticity and integrity of a message or document.
+
+Some examples of commonly used hashing algorithms include `SHA-256`, `SHA-3`, and `MD5`. It's important to choose a secure and up-to-date hashing algorithm for specific applications.
+
+
+# VLAN:
+
+VLAN stands for `Virtual Local Area Network`, and it is a technology that allows for the creation of multiple logical networks within a single physical network. A VLAN can be used to group devices that share a common set of requirements, such as `bandwidth` or `security`, regardless of their physical location on the network.
+
+In a VLAN, devices are grouped together based on their network needs, rather than their physical location. This allows for greater `flexibility` in network design, as devices can be added or removed from a VLAN without physically moving them on the network. Additionally, VLANs can help improve network `security` by isolating devices from each other, reducing the risk of unauthorized access or attacks.
+
+VLANs are commonly used in large enterprise networks, where they can help manage network `traffic` and improve overall network `performance`. They can also be used in smaller networks, such as those found in homes or small businesses, to segment network traffic and improve security.
+
+
+# Network security appliances:
+
+1. `Firewall`:
+   
+     A `firewall` is a network security appliance or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and an untrusted external network, such as the Internet, to prevent unauthorized access to the internal network.
+
+    Firewalls use various techniques to filter network traffic, including `packet filtering`, `stateful inspection`, and `application-level gateway filtering`. Packet filtering examines each packet of data and blocks packets that do not meet certain criteria. Stateful inspection examines the context of packets to determine if they are part of legitimate connections. Application-level gateway filtering analyzes packet contents to block malicious traffic.
+
+   Firewalls can be implemented as `software`, `hardware appliances`, or `virtual appliances` in a cloud environment. They enforce access restrictions, provide reporting and logging capabilities, and help network administrators track and analyze network traffic.
+
+   Overall, firewalls are a critical component of network security, protecting organizations from various threats and attacks.
+
+
+2. `DLP`: 
+
+    DLP (Data Loss Prevention) is a set of technologies and practices used to prevent sensitive data from being disclosed or lost.
+
+    DLP solutions are designed to detect and prevent the unauthorized transmission of sensitive data, such as intellectual property, financial information, personal identifiable information (`PII`), and other confidential data. These solutions use a variety of methods to detect and prevent data loss, including content inspection, network monitoring, endpoint security, and data classification.
+
+    DLP solutions typically consist of three components:
+> - `Content inspection`: This involves scanning data in transit or at rest, looking for sensitive information that matches predefined policies. 
+>- `Network monitoring`: This involves monitoring network traffic for signs of data exfiltration or unauthorized access.
+>- `Endpoint security`: This involves securing individual devices, such as laptops, desktops, or mobile devices, against data loss.
+        
+
+ DLP solutions are used in a variety of industries, including finance, healthcare, government, and retail, to protect against data breaches and other forms of data loss. They are an important component of any comprehensive data security strategy and can help organizations meet regulatory compliance requirements.  
+
+
+3. `IDS/IPS`:
+
+    `IDS` (Intrusion Detection System) is a type of network security appliance that monitors network traffic and detects suspicious activity or potential security breaches. The main function of an IDS is to identify attacks that have made it past the firewall and are attempting to exploit vulnerabilities in the network or applications.
+
+    IDS systems can be divided into two main types: `signature-based` and `anomaly-based`. Signature-based IDS systems compare network traffic against known patterns of attack (i.e., signatures), while anomaly-based IDS systems use machine learning algorithms to identify abnormal patterns of behavior that could indicate an attack.
+
+   When an IDS system detects suspicious activity, it generates an alert or notification to a security administrator or other authorized personnel, who can then investigate and take appropriate action to prevent the attack.
+
+   `IPS` (Intrusion Prevention System), on the other hand, is a network security appliance that actively prevents potential security threats and attacks. It sits between the firewall and other network devices, such as servers or clients, and works by analyzing network traffic and comparing it against a database of known attack signatures, similar to signature-based IDS systems. However, unlike IDS systems that only generate alerts, IPS systems actively block or prevent the detected attacks from entering the network.
