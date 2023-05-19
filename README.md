@@ -307,24 +307,24 @@ VLANs are commonly used in large enterprise networks, where they can help manage
 
 # Network security appliances:
 
-1. `Firewall`:
+## 1. Firewall:
    
-     A `firewall` is a network security appliance or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and an untrusted external network, such as the Internet, to prevent unauthorized access to the internal network.
+ A `firewall` is a network security appliance or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and an untrusted external network, such as the Internet, to prevent unauthorized access to the internal network.
 
-    Firewalls use various techniques to filter network traffic, including `packet filtering`, `stateful inspection`, and `application-level gateway filtering`. Packet filtering examines each packet of data and blocks packets that do not meet certain criteria. Stateful inspection examines the context of packets to determine if they are part of legitimate connections. Application-level gateway filtering analyzes packet contents to block malicious traffic.
+Firewalls use various techniques to filter network traffic, including `packet filtering`, `stateful inspection`, and `application-level gateway filtering`. Packet filtering examines each packet of data and blocks packets that do not meet certain criteria. Stateful inspection examines the context of packets to determine if they are part of legitimate connections. Application-level gateway filtering analyzes packet contents to block malicious traffic.
 
-   Firewalls can be implemented as `software`, `hardware appliances`, or `virtual appliances` in a cloud environment. They enforce access restrictions, provide reporting and logging capabilities, and help network administrators track and analyze network traffic.
+Firewalls can be implemented as `software`, `hardware appliances`, or `virtual appliances` in a cloud environment. They enforce access restrictions, provide reporting and logging capabilities, and help network administrators track and analyze network traffic.
 
-   Overall, firewalls are a critical component of network security, protecting organizations from various threats and attacks.
+Overall, firewalls are a critical component of network security, protecting organizations from various threats and attacks.
 
 
-2. `DLP`: 
+## 2. DLP: 
 
-    DLP (Data Loss Prevention) is a set of technologies and practices used to prevent sensitive data from being disclosed or lost.
+DLP (Data Loss Prevention) is a set of technologies and practices used to prevent sensitive data from being disclosed or lost.
 
-    DLP solutions are designed to detect and prevent the unauthorized transmission of sensitive data, such as intellectual property, financial information, personal identifiable information (`PII`), and other confidential data. These solutions use a variety of methods to detect and prevent data loss, including content inspection, network monitoring, endpoint security, and data classification.
+DLP solutions are designed to detect and prevent the unauthorized transmission of sensitive data, such as intellectual property, financial information, personal identifiable information (`PII`), and other confidential data. These solutions use a variety of methods to detect and prevent data loss, including content inspection, network monitoring, endpoint security, and data classification.
 
-    DLP solutions typically consist of three components:
+ DLP solutions typically consist of three components:
 > - `Content inspection`: This involves scanning data in transit or at rest, looking for sensitive information that matches predefined policies. 
 >- `Network monitoring`: This involves monitoring network traffic for signs of data exfiltration or unauthorized access.
 >- `Endpoint security`: This involves securing individual devices, such as laptops, desktops, or mobile devices, against data loss.
@@ -333,12 +333,112 @@ VLANs are commonly used in large enterprise networks, where they can help manage
  DLP solutions are used in a variety of industries, including finance, healthcare, government, and retail, to protect against data breaches and other forms of data loss. They are an important component of any comprehensive data security strategy and can help organizations meet regulatory compliance requirements.  
 
 
-3. `IDS/IPS`:
+## 3. IDS/IPS:
 
-    `IDS` (Intrusion Detection System) is a type of network security appliance that monitors network traffic and detects suspicious activity or potential security breaches. The main function of an IDS is to identify attacks that have made it past the firewall and are attempting to exploit vulnerabilities in the network or applications.
+`IDS` (Intrusion Detection System) is a type of network security appliance that monitors network traffic and detects suspicious activity or potential security breaches. The main function of an IDS is to identify attacks that have made it past the firewall and are attempting to exploit vulnerabilities in the network or applications.
 
-    IDS systems can be divided into two main types: `signature-based` and `anomaly-based`. Signature-based IDS systems compare network traffic against known patterns of attack (i.e., signatures), while anomaly-based IDS systems use machine learning algorithms to identify abnormal patterns of behavior that could indicate an attack.
+ IDS systems can be divided into two main types: `signature-based` and `anomaly-based`. Signature-based IDS systems compare network traffic against known patterns of attack (i.e., signatures), while anomaly-based IDS systems use machine learning algorithms to identify abnormal patterns of behavior that could indicate an attack.
 
    When an IDS system detects suspicious activity, it generates an alert or notification to a security administrator or other authorized personnel, who can then investigate and take appropriate action to prevent the attack.
 
    `IPS` (Intrusion Prevention System), on the other hand, is a network security appliance that actively prevents potential security threats and attacks. It sits between the firewall and other network devices, such as servers or clients, and works by analyzing network traffic and comparing it against a database of known attack signatures, similar to signature-based IDS systems. However, unlike IDS systems that only generate alerts, IPS systems actively block or prevent the detected attacks from entering the network.
+
+
+
+
+## 4. Honeypot:
+
+A `honeypot` is a computer security tool designed to lure hackers and malicious actors by creating a system or network that appears vulnerable. The goal is to attract attackers and gather information about their `tactics`, `techniques`, and `intentions`. Honeypots can mimic real-world systems and applications, simulating vulnerabilities to make them attractive targets. When an attacker interacts with the honeypot, their activities are logged and false information or decoy data may be provided to deceive them. Security professionals analyze the collected information to gain insights into attacker behavior and enhance overall security. Honeypots are an additional layer of defense in a network security strategy, but careful deployment is necessary to avoid exposing vulnerabilities or enabling attacks on other systems or networks.
+
+
+
+## 5. Mail filter:
+
+A *`mail filter` is a type of software that is used to screen incoming email messages and sort them based on predetermined criteria. The main function of a mail filter is to identify and block unwanted or malicious `email messages`, such as `spam`, `phishing emails`, and `malware attachments`, while allowing legitimate email messages to pass through.
+
+Mail filters use a variety of techniques to filter incoming email messages, including content-based filtering, header filtering, and `blacklisting/whitelisting`. Content-based filtering examines the contents of an email message to determine whether it is likely to be spam or contain malicious content. Header filtering examines the metadata of an email message to identify messages that are likely to be spam or have been spoofed. `Blacklisting/whitelisting` involves maintaining a list of `email addresses`, `domains`, or `IP addresses` that are either known to be malicious or trusted, and blocking or allowing email messages based on whether they match these lists.
+
+Mail filters can be implemented as standalone software applications or cloud-based services hosted by third-party providers. They can be configured to work with various email clients and servers and provide reporting and logging capabilities for tracking and analyzing email traffic.
+
+Overall, mail filters are a critical component of a comprehensive email security strategy, playing a vital role in protecting organizations from a wide range of email-based threats and attacks.
+
+
+## 6. Web filter:
+
+A `web filter` is a software or hardware device used to control access to websites and online content. Its main function is to block or restrict access to websites considered inappropriate, unsafe, or unproductive while allowing access to relevant and acceptable websites. Web filters employ various techniques such as URL filtering, content-based filtering, and category-based filtering.
+
+`URL filtering` examines website addresses to block or allow access based on blacklists or whitelists. Content-based filtering analyzes web page content to block websites containing inappropriate or unsafe content, like adult material or malware. Category-based filtering categorizes websites into predefined categories, permitting or blocking access based on these categories.
+
+Web filters can be implemented as standalone software applications or hardware devices installed on a network. They are compatible with various web browsers and operating systems and provide reporting and logging capabilities for traffic analysis.
+
+Web filters are crucial for a comprehensive web security strategy, playing a critical role in protecting organizations from web-based threats and attacks. They also help improve productivity by limiting access to non-work-related websites.
+
+
+
+# Security concepts:
+
+## Security in depth:
+
+`Security in depth` is a strategy for protecting computer systems and networks by implementing multiple layers of security controls. The idea is that if one layer of security fails or is breached, there are additional layers of protection that can prevent or limit the impact of an attack.
+
+### The layers of security controls in a security in depth strategy can include:
+
+  - Physical security: This includes physical measures such as security cameras, access control systems, and security guards to protect against physical threats such as theft or damage to equipment
+
+  -Perimeter security: This includes firewalls, intrusion detection and prevention systems, and other technologies designed to protect against external threats such as unauthorized access or denial of service attacks.
+
+  - Network security: This includes network segmentation, virtual private networks (VPNs), and other technologies designed to protect against attacks that occur over the network.
+
+  - Host security: This includes antivirus software, patch management, and other measures to protect individual computers and devices against malware and other attacks.
+
+  - Application security: This includes secure coding practices, testing for vulnerabilities, and other measures to protect against attacks that target application software.
+
+
+  
+`User education and awareness`: This includes training users on security best practices and raising awareness of common threats such as phishing attacks and social engineering.
+By implementing multiple layers of security controls, a security in depth strategy can help organizations protect against a wide range of threats and reduce the risk of data breaches and other security incidents.
+
+
+## Active attack VS passive attack:
+
+`Active and passive attacks` are two types of cybersecurity attacks that differ in their methods and objectives.
+An active attack involves an attacker attempting to modify, disrupt, or destroy a target system or network. `Examples of active attacks`
+> include malware infections, `denial-of-service` (`DoS`) attacks, and `man-in-themiddle` (`MitM`) attacks. Active attacks can be more difficult to detect and mitigate because the attacker is actively trying to compromise the system or network.
+>
+In contrast, a passive attack involves an attacker attempting to gather information or data without modifying or disrupting the target system or network. 
+`Examples of passive attacks` 
+>include eavesdropping, packet sniffing, and network reconnaissance. Passive attacks are generally easier to detect than active attacks because the attacker is not actively attempting to disrupt or modify the target system or network.
+
+Both types of attacks can be dangerous and have serious consequences, such as data theft, system or network downtime, and financial losses. It's important for organizations to implement appropriate security measures to protect against both active and passive attacks. This can include implementing firewalls, intrusion detection and prevention systems, encryption, access controls, and regular security training for employees.
+
+
+# Types of alerts:
+
+## False positive:
+
+In the context of security or threat detection, a false positive refers to an alert or notification that indicates the presence of a threat or an attack, but in reality, there is no actual threat or attack. In other words, a false positive is a type of error in which a security system or tool generates an alert or alarm that turns out to be incorrect or unnecessary.
+False positives can occur for various reasons, such as inaccurate or incomplete information, flawed algorithms or models, misconfigured systems, or environmental factors. False positives can be problematic because they can lead to wasted time and resources, unnecessary investigations or actions, and decreased trust in security systems or tools.
+To reduce the occurrence of false positives, security systems or tools can be configured to use more sophisticated algorithms or models, incorporate additional sources of data or context, or set more specific or customized thresholds for triggering alerts or notifications. Additionally, it is important for security teams to carefully analyze and verify alerts before taking any actions, to avoid responding to false positives.
+
+
+## False negative:
+
+In the context of security or threat detection, a false negative refers to a situation where a security system or tool fails to detect a real threat or attack, resulting in no alert or notification being generated. In other words, a false negative is a type of error in which a security system or tool fails to identify a threat or attack that actually occurred.
+False negatives can occur for various reasons, such as outdated or inadequate security systems or tools, misconfigured systems, limited visibility or access to data, or advanced and sophisticated attacks that evade detection. False negatives can be particularly problematic because they can leave organizations vulnerable to attacks and allow attackers to maintain access to systems and data.
+
+
+## True positive:
+
+In the context of security or threat detection, a true positive refers to an alert or notification generated by a security system or tool that accurately identifies the presence of a real threat or attack. In other words, a true positive is a correct detection of a real security threat.
+True positives are an essential component of effective security operations because they allow security teams to quickly identify and respond to potential threats before they can cause damage or disrupt operations. Security systems and tools that generate a high rate of true positives are generally considered more reliable and effective than those that generate a high rate of false positives or false negatives.
+To maximize the number of true positives and minimize false positives and false negatives, security systems and tools should be configured to use a combination of techniques and technologies, such as signature-based detection, behavioral analysis, machine learning, and threat intelligence. Additionally, security teams should regularly review and update their security policies and procedures, as well as conduct ongoing training and education for employees, to ensure that they are well-equipped to respond to security threats and incidents.
+
+
+## True negative:
+
+In the context of security or threat detection, a true negative refers to a situation where a security system or tool correctly identifies the absence of a threat or attack, and does not generate any false alarms or alerts. In other words, a true negative is a correct determination that there is no security threat present.
+True negatives are also an essential component of effective security operations, as they help reduce the number of false positives and allow security teams to focus on genuine security threats. For example, if a security system correctly identifies a legitimate user attempting to access a network resource, and does not generate any false alarms or alerts, this would be considered a true negative.
+
+
+
+
